@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package halallabirintus;
 
 import java.awt.HeadlessException;
@@ -10,11 +6,13 @@ import javax.swing.JOptionPane;
 
 
 public class HalalLabirintus extends javax.swing.JFrame {
+    int eleteroRandomSzam, ugyessegRandomSzam, szerencseRandomSzam;
     /**
      * Creates new form HalalLabirintus
      */
     public HalalLabirintus() {
         initComponents();
+        
     }
 
     /**
@@ -52,6 +50,7 @@ public class HalalLabirintus extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         jToggleButton1 = new javax.swing.JToggleButton();
         jToggleButton2 = new javax.swing.JToggleButton();
+        jLabel8 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -77,6 +76,12 @@ public class HalalLabirintus extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        setTitle("Halál Labirintus");
+        setMaximumSize(new java.awt.Dimension(500, 420));
+        setMinimumSize(new java.awt.Dimension(500, 420));
+        setResizable(false);
+        setSize(new java.awt.Dimension(500, 420));
+        setType(java.awt.Window.Type.UTILITY);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 formWindowClosing(evt);
@@ -148,10 +153,6 @@ public class HalalLabirintus extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(51, 51, 51)
-                        .addComponent(jButton4)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -159,7 +160,7 @@ public class HalalLabirintus extends javax.swing.JFrame {
                                     .addComponent(jTextField3)
                                     .addComponent(jTextField2)
                                     .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
                                     .addComponent(jScrollPane4)
@@ -170,6 +171,10 @@ public class HalalLabirintus extends javax.swing.JFrame {
                                 .addComponent(jTextField4))))
                     .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(62, 62, 62)
+                .addComponent(jButton4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -277,6 +282,8 @@ public class HalalLabirintus extends javax.swing.JFrame {
             }
         });
 
+        jLabel8.setText("jLabel8");
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -292,13 +299,16 @@ public class HalalLabirintus extends javax.swing.JFrame {
                         .addGap(37, 37, 37)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jToggleButton2)
-                            .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -308,8 +318,10 @@ public class HalalLabirintus extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jToggleButton1)
                         .addGap(18, 18, 18)
-                        .addComponent(jToggleButton2)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jToggleButton2)
+                        .addGap(37, 37, 37)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("1. Oldal", jPanel4);
@@ -387,6 +399,7 @@ public class HalalLabirintus extends javax.swing.JFrame {
         jScrollPane6.setEnabled(false);
         jScrollPane6.setWheelScrollingEnabled(false);
 
+        jTextArea3.setEditable(false);
         jTextArea3.setColumns(20);
         jTextArea3.setLineWrap(true);
         jTextArea3.setRows(5);
@@ -441,6 +454,7 @@ public class HalalLabirintus extends javax.swing.JFrame {
 
         jButton7.setText("Lapozás a 387. oldalra");
 
+        jTextArea4.setEditable(false);
         jTextArea4.setColumns(20);
         jTextArea4.setLineWrap(true);
         jTextArea4.setRows(5);
@@ -473,15 +487,18 @@ public class HalalLabirintus extends javax.swing.JFrame {
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGap(9, 9, 9)
                         .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(33, 33, 33)
                         .addComponent(jButton6)
-                        .addGap(18, 18, 18)
+                        .addGap(26, 26, 26)
                         .addComponent(jButton7))
                     .addComponent(jLabel5))
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("293. Oldal", jPanel9);
+
+        jMenuBar1.setMaximumSize(new java.awt.Dimension(500, 420));
+        jMenuBar1.setMinimumSize(new java.awt.Dimension(500, 420));
 
         jMenu1.setText("Beállítások");
 
@@ -535,6 +552,9 @@ public class HalalLabirintus extends javax.swing.JFrame {
             System.exit(0);
         }
     }
+    
+    private void statisztikak(){
+    }
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         jTabbedPane3.setSelectedIndex(2);
@@ -550,20 +570,20 @@ public class HalalLabirintus extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         jTabbedPane3.setSelectedIndex(1);
+        jLabel8.setText("Életerő: " + eleteroRandomSzam + "Ügyesség: " + ugyessegRandomSzam + "Szerencse: " + szerencseRandomSzam);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         Random randomSzam = new Random();
         
-        int eleteroRandomSzam = randomSzam.nextInt(1, 18);
+        eleteroRandomSzam = randomSzam.nextInt(1, 18);
         eleteroPanel.setText("" + eleteroRandomSzam);
         
-        int ugyessegRandomSzam = randomSzam.nextInt(1, 18);
+        ugyessegRandomSzam = randomSzam.nextInt(1, 18);
         ugyessegPanel.setText("" + ugyessegRandomSzam);
         
-        int szerencseRandmSzam = randomSzam.nextInt(1, 18);
-        szerencsePanel.setText("" + szerencseRandmSzam);
-
+        szerencseRandomSzam = randomSzam.nextInt(1, 18);
+        szerencsePanel.setText("" + szerencseRandomSzam);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
@@ -643,6 +663,7 @@ public class HalalLabirintus extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
